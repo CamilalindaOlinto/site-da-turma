@@ -1,0 +1,255 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Usando a nova fonte */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Fundo preto mais suave */
+    color: #ffffff; /* Cor do texto padrão para contraste */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Um pouco mais largo */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #0d0d0d; /* Preto mais escuro para o cabeçalho */
+    color: #d9c8ff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 5px solid #8372ff; /* Linha laranja vibrante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Tamanho maior */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2em;
+    color: #e5e5e5;
+    margin-top: 10px;
+}
+
+nav ul {
+    background-color: #222; /* Fundo da navegação */
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+    display: inline-block; /* Alinhar itens na mesma linha */
+}
+
+nav ul li a {
+    display: block; /* Ocupar todo o espaço do item */
+    padding: 18px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #a29aff; /* Laranja no hover/ativo */
+    color: #0d0d0d; /* Texto escuro no hover */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #a29aff; /* Título laranja */
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+.welcome-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #2a2a2a; /* Fundo levemente diferente para a seção de boas-vindas */
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section h2 {
+    color: #a29aff;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #ccc;
+}
+
+.welcome-section img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border: 3px solid #8074ff; /* Borda laranja na imagem principal */
+    transition: transform 0.3s ease;
+}
+
+.welcome-section img:hover {
+    transform: scale(1.02);
+}
+
+/* Galeria de Fotos e Vídeos */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    background-color: #2a2a2a; /* Fundo do item da galeria */
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px; /* Altura um pouco maior */
+    object-fit: cover;
+    border-bottom: 1px solid #4346f0; /* Linha laranja abaixo da imagem */
+}
+
+.gallery-item .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.gallery-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.gallery-item p {
+    padding: 18px;
+    margin: 0;
+    font-style: italic;
+    color: #ccc;
+    font-size: 0.95em;
+}
+
+/* Página de Histórias */
+.story {
+    background-color: #2a2a2a;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-left: 6px solid #7e81ff; /* Borda laranja mais grossa */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.story:hover {
+    background-color: #333;
+}
+
+.story h3 {
+    margin-top: 0;
+    color: #a3c5f9; /* Título da história laranja */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.story p {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.story p strong {
+    color: #c7c7ff; /* Nome do autor laranja */
+}
+
+/* Rodapé */
+footer {
+    background-color: #0d0d0d; /* Preto mais escuro para o rodapé */
+    color: #aaa;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 3px solid #7e80ff; /* Linha laranja no rodapé */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    .welcome-section {
+        padding: 30px 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 2em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
